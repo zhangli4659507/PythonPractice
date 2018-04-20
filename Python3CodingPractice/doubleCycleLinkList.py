@@ -37,15 +37,16 @@ class DoubleCycleLinkList():
     def printDoubleCycleLinkList(self):
         head = self.head
         while True:
-            if head.nextNode == self.head:
+            if head == self.head:
                 print("aaaaa",head.data,head, end=' ')
                 break
             else:
-                print(head.data,head,end=' ')
+                print(head.data,head,head.nextNode,end=' ')
                 head = head.nextNode
         print()
 linkList = DoubleCycleLinkList()
 linkList.createLinkList(10)
 linkList.insertLinkList(1,11)
 linkList.insertLinkList(1,1111)
+
 linkList.printDoubleCycleLinkList()
